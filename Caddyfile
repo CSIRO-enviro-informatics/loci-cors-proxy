@@ -3,4 +3,7 @@ tls /etc/ssl/wildcard-loci-cat.bundle.pem /etc/ssl/wildcard-loci-cat.pem
 proxy / http://corsanywhere:8080 {
    transparent
 }
-cors
+cors / {
+    methods           GET,POST,PUT,DELETE,OPTIONS
+    allowed_headers   X-requested-with
+}

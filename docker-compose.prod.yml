@@ -4,13 +4,11 @@ services:
   caddy:
     image: abiosoft/caddy
     ports:
-      - 80:80
-      - 443:443
-    environment:
-      - ACME_AGREE=true
+      - 443:2015
     volumes:
       - ./Caddyfile:/etc/Caddyfile
       - ./certs:/etc/ssl
     links:
       - corsanywhere
     restart: always
+
